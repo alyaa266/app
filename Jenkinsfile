@@ -40,7 +40,7 @@ pipeline {
 
     // login to OpenShift Cluster via cluster url & service account token
     withCredentials([string(credentialsId: "${openshift-jenkins--token}", variable: 'OpenShift_CREDENTIALS')]) {
-            sh "oc login --server=${https://api.ocp-training.ivolve-test.com:6443} --token=${openshift-jenkins--token} --insecure- skip-tls-verify"
+            sh "oc login --server=https://api.ocp-training.ivolve-test.com:6443 --token=${openshift-jenkins--token} --insecure- skip-tls-verify"
             sh "oc apply -f deployment.yml"
             sh "oc apply -f service.yml"
                         }
