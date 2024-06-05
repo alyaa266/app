@@ -3,7 +3,7 @@ pipeline {
     environment {
         openshiftClusterURL  = 'https://api.ocp-training.ivolve-test.com:6443'
         OPENSHIFT_CREDENTIALS = 'openshift-jenkins-token'
-        dockerHubCredentialsID	    = 'dockerhub-credentials'
+        dockerHubCredentialsID	    = 'DockerHub'
         openshiftCredentialsID =  'openshift-jenkins--token'
         APP_NAME = 'my-app'
         NAMESPACE = 'alyaabadr'
